@@ -1,0 +1,23 @@
+{
+    "name": "ROS 2 PX4 Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/ros:humble",
+    "features": {
+        "ghcr.io/devcontainers/features/ubuntu:1.1.0": {
+            "version": "22.04"
+        }
+    },
+    "forwardPorts": [8888, 8080],
+    "postCreateCommand": "bash .devcontainer/post-create.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-iot.vscode-ros",
+                "eamodio.gitlens",
+                "mhutchie.git-graph"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
